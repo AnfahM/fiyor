@@ -15,7 +15,11 @@ export default class Navbar extends Component {
     const menuContainer = this.menuRef;
     const buttonContainer = this.buttonRef;
 
-    if (menuContainer && !menuContainer.contains(e.target) && !buttonContainer.contains(e.target)) {
+    if (
+      menuContainer &&
+      !menuContainer.contains(e.target) &&
+      !buttonContainer.contains(e.target)
+    ) {
       this.closeMobileMenu();
     }
   };
@@ -33,7 +37,7 @@ export default class Navbar extends Component {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
-    this.closeMobileMenu(); // Close the menu after navigating
+    this.closeMobileMenu();
   };
 
   render() {
@@ -41,8 +45,12 @@ export default class Navbar extends Component {
 
     return (
       <div className="fixed w-full flex flex-col md:flex-row bg-transparent z-20">
-        <div className="w-full md:w-5/12  flex items-center justify-between bg-transparent shadow-md">
-          <img src="/images/IMG_3025.PNG" alt="Logo" width="120px" />
+        <div className="w-full md:w-5/12 flex items-center justify-between bg-transparent shadow-md">
+          <img
+            src={`${process.env.PUBLIC_URL}/images/IMG_3025.PNG`}
+            alt="Logo"
+            width="120px"
+          />
 
           <button
             ref={(ref) => (this.buttonRef = ref)}
@@ -88,19 +96,19 @@ export default class Navbar extends Component {
                   }}
                 >
                   <button
-      onClick={() =>
-        this.scrollToSection(
-          item.toLowerCase().replace(' ', '-') === 'home'
-            ? 'header'
-            : item.toLowerCase().replace(' ', '-') === 'contact-us'
-            ? 'footer'
-            : item.toLowerCase().replace(' ', '-')
-        )
-      }
-      className="hover:underline"
-    >
-      {item}
-    </button>
+                    onClick={() =>
+                      this.scrollToSection(
+                        item.toLowerCase().replace(' ', '-') === 'home'
+                          ? 'header'
+                          : item.toLowerCase().replace(' ', '-') === 'contact-us'
+                          ? 'footer'
+                          : item.toLowerCase().replace(' ', '-')
+                      )
+                    }
+                    className="hover:underline"
+                  >
+                    {item}
+                  </button>
                 </li>
               )
             )}

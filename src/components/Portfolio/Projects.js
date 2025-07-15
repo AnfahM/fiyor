@@ -17,7 +17,7 @@ const Carousel = () => {
     {
       review:
         "Great customer support and affordable pricing. My Malaysia tour was well organized from start to finish. Truly impressed and highly recommended!",
-      name: "Sherbin",
+      name: "Nihal",
       service: "Malaysia Tour Package",
     },
   ];

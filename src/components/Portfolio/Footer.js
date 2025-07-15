@@ -26,9 +26,9 @@ export default function Footer() {
       {/* Top section */}
       <div className="w-full grid md:grid-cols-[1fr_auto_1fr] grid-cols-1 items-center gap-5 relative">
         {/* Logo */}
-        <a href="/" className="flex justify-center">
+        <a href="https://wa.me/919745592578" className="flex justify-center">
           <img
-            src="/images/mainlogo.png"
+            src={`${process.env.PUBLIC_URL}/images/mainlogo.png`}
             alt="Fiyor Travels Logo"
             className="w-[200px] h-[200px] object-contain"
           />

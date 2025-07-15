@@ -8,7 +8,7 @@ export default class Portfolio extends Component {
         <div className="h-screen overflow-hidden relative block md:hidden">
           <video
             className="min-h-full min-w-full object-cover"
-            src="/video/WhatsApp Video 2025-07-07 at 14.48.20_f4666920.mp4"
+            src={`${process.env.PUBLIC_URL}/video/WhatsApp Video 2025-07-07 at 14.48.20_f4666920.mp4`}
             autoPlay
             loop
             muted
@@ -23,11 +23,11 @@ export default class Portfolio extends Component {
           </div>
         </div>
 
-        {/* Desktop View: Image */}
+        {/* Desktop View: Video */}
         <div className="h-screen overflow-hidden relative hidden md:block">
           <video
             className="min-h-full min-w-full object-cover"
-            src="/video/videodesktopview.mp4"
+            src={`${process.env.PUBLIC_URL}/video/videodesktopview.mp4`}
             autoPlay
             loop
             muted

@@ -5,28 +5,61 @@ export default class Services extends Component {
     const destinations = [
       {
         name: 'Malaysia',
-        image: '/images/malaysia.avif',
+        image: `${process.env.PUBLIC_URL}/images/malaysia.avif`,
         description: 'Experience vibrant cities, rich culture, and tropical beauty in Malaysia.',
       },
       {
         name: 'Singapore',
-        image: '/images/singapor.jpg',
+        image: `${process.env.PUBLIC_URL}/images/singapor.jpg`,
         description: 'Discover a futuristic cityscape, world-class attractions.',
       },
       {
         name: 'Bali',
-        image: '/images/bali.jpg',
+        image: `${process.env.PUBLIC_URL}/images/bali.jpg`,
         description: 'Explore serene beaches, spiritual temples, and scenic rice terraces.',
       },
       {
         name: 'Thailand',
-        image: '/images/thailand.jpg',
+        image: `${process.env.PUBLIC_URL}/images/thailand.jpg`,
         description: 'Enjoy exotic islands, vibrant nightlife, and delicious Thai cuisine.',
       },
       {
         name: 'Dubai',
-        image: '/images/dubai.jpg',
+        image: `${process.env.PUBLIC_URL}/images/dubai.jpg`,
         description: 'Visit the glamorous city of Dubai, famous for luxury shopping and modern architecture.',
+      },
+    ];
+
+    const services = [
+      {
+        title: 'Ticket Booking',
+        image: `${process.env.PUBLIC_URL}/images/ticketing.jpg`,
+        alt: 'Ticket Booking',
+        desc: 'Quick and affordable flight ticket booking tailored to your travel plan.',
+      },
+      {
+        title: 'Visa Assistance',
+        image: `${process.env.PUBLIC_URL}/images/visaprocessing.jpg`,
+        alt: 'Visa Assistance',
+        desc: 'Get complete support for your visa process and approvals.',
+      },
+      {
+        title: 'Travel Insurance',
+        image: `${process.env.PUBLIC_URL}/images/insurance.webp`,
+        alt: 'Travel Insurance',
+        desc: 'Secure your journey with the best travel insurance options.',
+      },
+      {
+        title: 'Hotel Booking',
+        image: `${process.env.PUBLIC_URL}/images/hotel.webp`,
+        alt: 'Hotel Booking',
+        desc: 'Affordable and luxurious hotel stays for your convenience.',
+      },
+      {
+        title: 'Resort Booking',
+        image: `${process.env.PUBLIC_URL}/images/resort.jpg`,
+        alt: 'Resort Booking',
+        desc: 'Relax at premium resorts with the best amenities and views.',
       },
     ];
 
@@ -72,38 +105,7 @@ export default class Services extends Component {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
-            {[
-              {
-                title: 'Ticket Booking',
-                image: '/images/ticketing.jpg',
-                alt: 'Ticket Booking',
-                desc: 'Quick and affordable flight ticket booking tailored to your travel plan.',
-              },
-              {
-                title: 'Visa Assistance',
-                image: '/images/visaprocessing.jpg',
-                alt: 'Visa Assistance',
-                desc: 'Get complete support for your visa process and approvals.',
-              },
-              {
-                title: 'Travel Insurance',
-                image: '/images/insurance.webp',
-                alt: 'Travel Insurance',
-                desc: 'Secure your journey with the best travel insurance options.',
-              },
-              {
-                title: 'Hotel Booking',
-                image: '/images/hotel.webp',
-                alt: 'Hotel Booking',
-                desc: 'Affordable and luxurious hotel stays for your convenience.',
-              },
-              {
-                title: 'Resort Booking',
-                image: '/images/resort.jpg',
-                alt: 'Resort Booking',
-                desc: 'Relax at premium resorts with the best amenities and views.',
-              },
-            ].map((service, idx) => (
+            {services.map((service, idx) => (
               <a
                 key={idx}
                 href={whatsappLink}
@@ -135,7 +137,7 @@ export default class Services extends Component {
             </div>
             <div className="flex-1 flex justify-center">
               <img
-                src="/images/domestic.jpg"
+                src={`${process.env.PUBLIC_URL}/images/domestic.jpg`}
                 alt="Domestic Travel"
                 className="w-1/2 h-auto rounded-xl shadow-lg object-cover"
               />

@@ -19,10 +19,10 @@ export default class AboutUs extends Component {
                   </h2>
                 </div>
                 <p className="text-gray-600 text-base leading-7 mb-10">
-                We specialize in international tour packages and ticketing at the best prices.
-With years of experience and strong industry ties, we deliver smooth travel planning.
-From flights to full itineraries, we handle everything with care and professionalism.
-Our mission is to make every journey affordable, memorable, and hassle-free.
+                  We specialize in international tour packages and ticketing at the best prices.
+                  With years of experience and strong industry ties, we deliver smooth travel planning.
+                  From flights to full itineraries, we handle everything with care and professionalism.
+                  Our mission is to make every journey affordable, memorable, and hassle-free.
                 </p>
                 <p
                   className="theme-btn btn-style-three relative text-md text-center uppercase font-bold bg-white text-gray-800 py-3 px-10 border-2 border-[#974223] hover:bg-[#974223] hover:text-white transition inline-block w-full"
@@ -38,7 +38,7 @@ Our mission is to make every journey affordable, memorable, and hassle-free.
               <div className="relative md:ml-12">
                 <div className="relative">
                   <img
-                    src="/images/IMG_3027.PNG"
+                    src={`${process.env.PUBLIC_URL}/images/IMG_3027.PNG`}
                     alt="About Us"
                     className="w-full rounded-lg shadow-lg"
                   />

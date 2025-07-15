@@ -11,17 +11,17 @@ export default class NavbarSystem extends Component {
   render() {
     return (
       <div>
-        <div className="bg-transparent  fixed top-0 left-0 w-full z-20">
+        <div className="bg-transparent fixed top-0 left-0 w-full z-20">
           <div className="max-w-screen-xl mx-auto flex items-center justify-between">
             <div className="text-xl font-bold">
               <img
-                src="/images/IMG_3025.PNG"
+                src={`${process.env.PUBLIC_URL}/images/IMG_3025.PNG`}
                 alt="Logo"
                 width={'150px'}
               />
             </div>
 
-            <div className="hidden md:flex space-x-6 text-[white]">
+            <div className="hidden md:flex space-x-6 text-white">
               <button
                 onClick={() => this.scrollToSection('header')}
                 className="hover:underline"
