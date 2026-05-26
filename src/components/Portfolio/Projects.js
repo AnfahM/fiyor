@@ -1,131 +1,128 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Carousel = () => {
-  const carouselItems = [
+const Highlights = () => {
+  const features = [
     {
-      review:
-        "Had a great experience booking my tickets through your service. The process was smooth, the support was quick, and everything was handled professionally. Really happy with how easy it was. Will definitely book again!",
-      name: "Rishil V P",
-      service: "Ticket Booking",
+      number: "3+",
+      title: "Years Experience",
+      desc: "Trusted expertise in real estate solutions and property investments.",
     },
     {
-      review:
-        "The Bali package was well arranged with clear guidance throughout. Everything was smooth and stress-free. Truly satisfied with the service!",
-      name: "Theertha",
-      service: "Bali Package",
+      number: "100+",
+      title: "Happy Clients",
+      desc: "Successfully helping families and investors find ideal properties.",
     },
     {
-      review:
-        "Great customer support and affordable pricing. My Malaysia tour was well organized from start to finish. Truly impressed and highly recommended!",
-      name: "Nihal",
-      service: "Malaysia Tour Package",
+      number: "50+",
+      title: "Properties Listed",
+      desc: "Premium residential and commercial properties in prime locations.",
+    },
+    {
+      number: "24/7",
+      title: "Customer Support",
+      desc: "Professional guidance and support whenever you need assistance.",
     },
   ];
 
-  const [current, setCurrent] = useState(0);
-
-  const handleLeft = () => {
-    setCurrent(
-      (prev) => (prev - 1 + carouselItems.length) % carouselItems.length
-    );
-  };
-
-  const handleRight = () => {
-    setCurrent((prev) => (prev + 1) % carouselItems.length);
-  };
-
-  const getPositionClass = (index) => {
-    if (index === current) return "z-20 scale-110 translate-x-0";
-    if (index === (current - 1 + carouselItems.length) % carouselItems.length)
-      return "z-10 -translate-x-[120%] scale-90";
-    if (index === (current + 1) % carouselItems.length)
-      return "z-10 translate-x-[120%] scale-90";
-    return "hidden";
-  };
-
   return (
-    <div className="relative w-full flex flex-col items-center justify-center bg-gray-900 text-white overflow-hidden">
-      <span className="text-gray-400 text-lg max-w-lg mx-auto mb-2 capitalize flex items-center pt-16">
-        Some Of Our Feedbacks
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="text-indigo-600 ml-3 w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-          />
-        </svg>
-      </span>
-      <h1 className="text-white text-4xl md:text-5xl xl:text-6xl font-semibold max-w-3xl mx-auto mb-16 leading-snug pb-24">
-        From Our Clients
-      </h1>
+    <section
+      className="relative py-24 overflow-hidden"
+      style={{ backgroundColor: "#172621" }}
+    >
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
 
-      {/* Carousel Container */}
-      <div className="relative w-64 h-80 mb-6">
-        {carouselItems.map((item, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-all duration-500 ease-in-out transform rounded-lg overflow-hidden shadow-lg bg-gray-800 p-6 flex flex-col justify-between ${getPositionClass(
-              index
-            )}`}
-          >
-            <p className="text-gray-300 text-sm leading-relaxed">
-              "{item.review}"
-            </p>
-            <div className="mt-4">
-              <p className="text-indigo-400 font-semibold">{item.name}</p>
-              <p className="text-gray-400 text-xs">{item.service}</p>
-            </div>
+        {/* Heading */}
+        <div className="text-center mb-20">
+
+          <div className="flex items-center justify-center mb-5">
+            <div className="w-12 h-[2px] bg-[#d7a449] mr-4"></div>
+
+            <span className="uppercase tracking-[4px] text-[#d7a449] text-sm font-semibold">
+              Why Choose Us
+            </span>
+
+            <div className="w-12 h-[2px] bg-[#d7a449] ml-4"></div>
           </div>
-        ))}
-      </div>
 
-      {/* Navigation Buttons */}
-      <div className="flex space-x-4 pt-10">
-        <button
-          onClick={handleLeft}
-          className="bg-transparent border border-white rounded-full w-12 h-12 flex items-center justify-center hover:text-gray-400"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              fillRule="evenodd"
-              d="m15 4l2 2l-6 6l6 6l-2 2l-8-8z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
+          <h1 className="text-white text-4xl md:text-5xl font-bold leading-tight">
+            Trusted Real Estate
+            <br />
 
-        <button
-          onClick={handleRight}
-          className="bg-transparent border border-white rounded-full w-12 h-12 flex items-center justify-center hover:text-gray-400"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-6 h-6"
+            <span className="text-[#d7a449]">
+              Solutions For Your Future
+            </span>
+          </h1>
+
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto mt-6 leading-8">
+            We combine trust, professionalism, and market expertise
+            to deliver premium real estate experiences for every client.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {features.map((item, index) => (
+            <div
+              key={index}
+              className="group bg-[#1E2E29] border border-[#d7a449]/10 rounded-3xl p-8 hover:-translate-y-3 transition duration-500 hover:border-[#d7a449]/40 shadow-xl"
+            >
+
+              {/* Number */}
+              <h2 className="text-[#d7a449] text-5xl font-bold mb-5 group-hover:scale-110 transition duration-300">
+                {item.number}
+              </h2>
+
+              {/* Title */}
+              <h3 className="text-white text-2xl font-semibold mb-4">
+                {item.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-400 leading-7 text-sm">
+                {item.desc}
+              </p>
+
+            </div>
+          ))}
+
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-20 text-center">
+
+          <h2 className="text-white text-3xl md:text-4xl font-bold leading-snug">
+            Ready To Find Your
+            <span className="text-[#d7a449]">
+              {" "}Dream Property?
+            </span>
+          </h2>
+
+          <p className="text-gray-400 mt-5 text-lg">
+            Let PKB LANDESK guide you towards smart and secure investments.
+          </p>
+
+          <a
+            href="https://wa.me/919544242148"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <path
-              fillRule="evenodd"
-              d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
+            <button
+              className="mt-8 px-8 py-4 rounded-full font-semibold text-sm hover:scale-105 transition duration-300 shadow-lg"
+              style={{
+                backgroundColor: "#d7a449",
+                color: "#172621",
+              }}
+            >
+              Contact On WhatsApp
+            </button>
+          </a>
+
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Carousel;
+export default Highlights;

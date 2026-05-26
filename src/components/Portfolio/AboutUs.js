@@ -1,55 +1,113 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class AboutUs extends Component {
   render() {
     return (
-      <section className="about-section py-28 relative">
-        <div className="container mx-auto px-8">
-          <div className="flex flex-wrap items-center -mx-4">
-            
-            {/* Left Content */}
-            <div className="w-full md:w-6/12 px-4 mb-10 md:mb-0">
-              <div className="pt-12 md:pr-24">
-                <div className="sec-title mb-8">
-                  <div className="title text-[#974223] text-lg font-bold uppercase mb-4 relative after:content-[''] after:w-10 after:h-px after:bg-gray-400 after:absolute after:right-0 after:bottom-2.5">
-                    About Us
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold leading-tight text-gray-800">
-                    We Are The Leader In <br /> The Travels
-                  </h2>
-                </div>
-                <p className="text-gray-600 text-base leading-7 mb-10">
-                  We specialize in international tour packages and ticketing at the best prices.
-                  With years of experience and strong industry ties, we deliver smooth travel planning.
-                  From flights to full itineraries, we handle everything with care and professionalism.
-                  Our mission is to make every journey affordable, memorable, and hassle-free.
+      <section
+        className="relative py-24 overflow-hidden"
+        style={{ backgroundColor: "#172621" }}
+      >
+        {/* Background Glow */}
+        
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+            {/* LEFT IMAGE */}
+            <div className="relative flex justify-center">
+
+              {/* Border */}
+              <div className="absolute -top-5 -left-5 w-[92%] h-full border-2 border-[#d7a449] rounded-3xl"></div>
+
+              {/* Image */}
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl w-full max-w-md">
+
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/basithposterstory.png`}
+                  alt="Founder"
+                  className="w-full h-[580px] object-cover hover:scale-105 transition duration-700"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+
+              </div>
+            </div>
+
+            {/* RIGHT CONTENT */}
+            <div className="max-w-lg">
+
+              {/* Small Title */}
+              <div className="flex items-center mb-5">
+                <div className="w-12 h-[2px] bg-[#d7a449] mr-4"></div>
+
+                <span className="uppercase tracking-[4px] text-[#d7a449] text-sm font-semibold">
+                  About PKB LANDESK
+                </span>
+              </div>
+
+              {/* Heading */}
+              <h1 className="text-white text-4xl md:text-5xl font-bold leading-tight mb-7">
+                Turning Properties
+                <br />
+
+                <span className="text-[#d7a449]">
+                  Into Smart Investments
+                </span>
+              </h1>
+
+              {/* Short Content */}
+              <div className="space-y-5 text-gray-300 text-base leading-8">
+
+                <p>
+                  <span className="text-white font-semibold">
+                    PKB LANDESK
+                  </span>{" "}
+                  delivers trusted real estate solutions focused on
+                  premium homes, commercial spaces, and valuable land
+                  investments.
                 </p>
-                <p
-                  className="theme-btn btn-style-three relative text-md text-center uppercase font-bold bg-white text-gray-800 py-3 px-10 border-2 border-[#974223] hover:bg-[#974223] hover:text-white transition inline-block w-full"
+
+                <p>
+                  With professionalism, transparency, and market
+                  expertise, we help clients make confident property
+                  decisions that create long-term value and growth.
+                </p>
+
+              </div>
+
+              {/* Quote */}
+              <div className="mt-8 border-l-4 border-[#d7a449] pl-5">
+                <h3 className="text-2xl italic text-white leading-relaxed font-light">
+                  “Where dreams find an address.”
+                </h3>
+              </div>
+
+              {/* Buttons */}
+              <div className="flex flex-wrap gap-4 mt-10">
+
+                <a
+                  href="https://wa.me/919544242148"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Travel With US
-                  <span className="absolute inset-0 -z-10 bg-[url('https://i.ibb.co/DKn55Qz/pattern-1.jpg')] bg-repeat translate-x-2 translate-y-2"></span>
-                </p>
-              </div>
-            </div>
+                  <button
+                    className="px-7 py-3 rounded-full font-semibold text-sm hover:scale-105 transition duration-300 shadow-lg"
+                    style={{
+                      backgroundColor: "#d7a449",
+                      color: "#172621",
+                    }}
+                  >
+                    Contact Us
+                  </button>
+                </a>
 
-            {/* Right Image */}
-            <div className="w-full md:w-6/12 px-4 relative">
-              <div className="relative md:ml-12">
-                <div className="relative">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/images/IMG_3027.PNG`}
-                    alt="About Us"
-                    className="w-full rounded-lg shadow-lg"
-                  />
-                  <div className="overlay-box absolute left-10 bottom-12">
-                    {/* Reserved for overlay content */}
-                  </div>
-                </div>
-                <div className="absolute inset-x-10 inset-y-10 -z-10 border-2 border-[#d7a449]"></div>
-              </div>
-            </div>
+                
 
+              </div>
+
+            </div>
           </div>
         </div>
       </section>

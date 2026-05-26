@@ -13,11 +13,11 @@ export default class NavbarSystem extends Component {
       <div>
         <div className="bg-transparent fixed top-0 left-0 w-full z-20">
           <div className="max-w-screen-xl mx-auto flex items-center justify-between">
-            <div className="text-xl font-bold">
+            <div className="text-xl font-bold m-6">
               <img
-                src={`${process.env.PUBLIC_URL}/images/IMG_3025.PNG`}
+                src={`${process.env.PUBLIC_URL}/images/pkblogoicon.PNG`}
                 alt="Logo"
-                width={'150px'}
+                width={'110px'}
               />
             </div>
 

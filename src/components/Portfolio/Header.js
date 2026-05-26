@@ -4,43 +4,65 @@ export default class Portfolio extends Component {
   render() {
     return (
       <div>
-        {/* Mobile View: Video */}
+
+        {/* MOBILE VIEW */}
         <div className="h-screen overflow-hidden relative block md:hidden">
-          <video
-            className="min-h-full min-w-full object-cover"
-            src={`${process.env.PUBLIC_URL}/video/WhatsApp Video 2025-07-07 at 14.48.20_f4666920.mp4`}
-            autoPlay
-            loop
-            muted
-            playsInline
-          ></video>
-          <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
-          <div className="absolute top-8 left-4 head-container flex w-full h-full flex-col justify-center items-start gap-7 px-3">
-            <h1 className="font-serif text-5xl w-full sm:text-5xl text-start text-white">
-              <b>Travel</b> <br />
-              <b className="pl-10">Beyond <br /> Limits</b>
+
+          {/* Background Image */}
+          <img
+            className="w-full h-full object-cover"
+            src={`${process.env.PUBLIC_URL}/images/pkblandeskmobile.jpg`}
+            alt="PKB LANDESK"
+          />
+
+          {/* Dark Overlay */}
+          <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+
+          {/* Content */}
+          <div className="absolute bottom-16 left-1/2 -translate-x-1/2 text-center px-6 z-10 w-full">
+
+            <h1 className="text-white text-4xl font-bold leading-tight tracking-wide">
+              PKB LANDESK
             </h1>
+
+            <div className="w-24 h-[2px] bg-[#d7a449] mx-auto my-4"></div>
+
+            <p className="text-gray-200 text-lg font-light italic">
+              “Where dreams find an address”
+            </p>
+
           </div>
         </div>
 
-        {/* Desktop View: Video */}
+        {/* DESKTOP VIEW */}
         <div className="h-screen overflow-hidden relative hidden md:block">
-          <video
-            className="min-h-full min-w-full object-cover"
-            src={`${process.env.PUBLIC_URL}/video/videodesktopview.mp4`}
-            autoPlay
-            loop
-            muted
-            playsInline
-          ></video>
-          <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
-          <div className="absolute top-8 left-28 head-container flex w-full md:w-2/3 h-full flex-col justify-center items-start gap-7 px-3">
-            <h1 className="font-serif text-7xl md:leading-[110px] text-white text-start">
-              <b>Travel</b> <br />
-              <b className="pl-16">Beyond <br /> Limits</b>
+
+          {/* Background Image */}
+          <img
+            className="w-full h-full object-cover"
+            src={`${process.env.PUBLIC_URL}/images/pkblandesksystem.jpg`}
+            alt="PKB LANDESK"
+          />
+
+          {/* Dark Overlay */}
+          <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
+
+          {/* Content */}
+          <div className="absolute bottom-20 left-16 lg:left-24 z-10 max-w-2xl">
+
+            <h1 className="text-white text-6xl lg:text-7xl font-bold leading-tight tracking-wide drop-shadow-2xl">
+              PKB LANDESK
             </h1>
+
+            <div className="w-32 h-[3px] bg-[#d7a449] mt-6 mb-6"></div>
+
+            <p className="text-gray-200 text-2xl lg:text-3xl font-light italic tracking-wide">
+              “Where dreams find an address”
+            </p>
+
           </div>
         </div>
+
       </div>
     );
   }
